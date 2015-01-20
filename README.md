@@ -1,7 +1,7 @@
-ipgrep - ipv4 grep like
-=======================
+ipgrep - ipv4 grep-like tool
+============================
 
-`ipgrep` is a simple `IPv4` grep-like program written in go. It can be used to filter lines in log files with matching `IPv4`'s in a specific column.
+`ipgrep` is a simple `IPv4` grep-like tool. It can be used to filter lines in log files matching `IPv4`'s in a specific column.
 
 Features
 ========
@@ -31,11 +31,11 @@ Filter lines with `10.0.0.0/24` and `10.0.12.0/24` at the `1`<sup>st</sup> colum
 
     ipgrep -i /var/log/apache/access.log -c 1 -n '10.0.0.0/24 10.0.12.0/24'
 
-Filter lines in a `/var/log/apache/access.log.gz` to `stdout`:
+Filter lines in `/var/log/apache/access.log.gz` to `stdout`:
 
     ipgrep -z -i /var/log/apache/access.log -c 1 -n 10.0.0.0/8 | gzip -c -d
     
-Filter lines in a `/var/log/apache/access.log.gz` to `/var/log/apache/intranet_access.log.gz`:
+Filter lines in `/var/log/apache/access.log.gz` to `/var/log/apache/intranet_access.log.gz`:
 
     ipgrep -z -i /var/log/apache/access.log.gz -o /var/log/apache/intranet_access.log.gz -c 1 -n 10.0.0.0/8
     
