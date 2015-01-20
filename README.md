@@ -20,6 +20,20 @@ Command line
 - **-i** input file. Defaults to `stdin`.
 - **-o** output file. Defaults to `stdout`.
 
+Build
+=====
+
+Install `go` compiler and then run:
+
+    go build ipgrep.go
+
+Install
+=======
+
+Place the binary in one of yours binary path.
+
+    cp ipgrep /usr/local/bin
+
 Usage
 =====
 
